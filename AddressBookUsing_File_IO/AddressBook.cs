@@ -155,7 +155,6 @@ namespace AddressBookUsing_File_IO
 
         }
     }
-}
 //        public void ChooseSort()
 //        {
 //            Console.WriteLine("Sort By: ");
