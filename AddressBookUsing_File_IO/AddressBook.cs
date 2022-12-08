@@ -133,64 +133,29 @@ namespace AddressBookUsing_File_IO
                 }
             }
         }
-
-
-            public void SearchPerson()
+        public void SearchPerson()
+        {
+            Console.WriteLine("Please Enter City or State Which You Want to Search : ");
+            string city = Console.ReadLine();
+            foreach (var element in DictName)
             {
-                Console.WriteLine("Please Enter City or State Which You Want to Search : ");
-                string city = Console.ReadLine();
-                foreach (var element in DictName)
+                if (element.Value.City.Equals(city))
                 {
-                    if (element.Value.City.Equals(city))
-                    {
-                        Console.WriteLine("Contact Found :" + city + " " + element.Value.FirstName);
-                    }
-                    else if (element.Value.State.Equals(city))
-                    {
-                        Console.WriteLine("Contact Found :" + city + " " + element.Value.FirstName);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Sorry No such City or State in AddressBook !!!!!!!");
-                    }
+                    Console.WriteLine("Contact Found :" + city + " " + element.Value.FirstName);
+                }
+                else if (element.Value.State.Equals(city))
+                {
+                    Console.WriteLine("Contact Found :" + city + " " + element.Value.FirstName);
+                }
+                else
+                {
+                    Console.WriteLine("Sorry No such City or State in AddressBook !!!!!!!");
                 }
             }
+
         }
+    }
 }
-//        public void FindCityState()
-//        {
-//            Console.WriteLine("Enter First Name of a Person to View his City and State : ");
-//            string person = Console.ReadLine();
-//            foreach (var element in DictName)
-//            {
-//                if (element.Value.FirstName.Equals(person))
-//                {
-//                    Console.WriteLine("\n" + person + " lives in :: '" + element.Value.City + "' City and '" + element.Value.State + "' State.\n");
-//                }
-//                else
-//                {
-//                    Console.WriteLine("No such Person found in Addressbook.\n\nAvailable person in your addressbook are :: " + element.Value.FirstName + "\n");
-//                }
-//            }
-//        }
-//        public void FindNumOfPerson()
-//        {
-//            Console.WriteLine("Enter City or State ::");
-//            string cityState = Console.ReadLine();
-//            int countPerson = 0;
-//            foreach (var element in DictName)
-//            {
-//                if (element.Value.City.Equals(cityState))
-//                {
-//                    countPerson++;
-//                }
-//                if (element.Value.State.Equals(cityState))
-//                {
-//                    countPerson++;
-//                }
-//            }
-//            Console.WriteLine("\nNumber of Person found in " + cityState + " are " + countPerson);
-//        }
 //        public void ChooseSort()
 //        {
 //            Console.WriteLine("Sort By: ");
