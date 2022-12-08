@@ -44,50 +44,45 @@ namespace AddressBookUsing_File_IO
                 Console.WriteLine("\nSaved Contact is  :\n " + contact.FirstName + contact.LastName + " " + contact.Address + "\nCity: " + contact.City + "\nState is : " + contact.State + "\nZip Code: " + contact.ZipCode + "\nPhone Number: " + contact.PhoneNumber + "\nEmail: " + contact.Email);
             }
         }
+
+
+        public void EditContact(string Name)
+        {
+          
+            foreach (var contact in list)
+            {
+                if (contact.FirstName == Name)
+                {
+                    Console.WriteLine("Enter new First Name");
+                    string newFirstName = Console.ReadLine();
+                    contact.FirstName = newFirstName;
+                    Console.WriteLine("Enter new Last Name:");
+                    string newLastName = Console.ReadLine();
+                    contact.LastName = newLastName;
+                    Console.WriteLine("Enter new Address:");
+                    string newAddress = Console.ReadLine();
+                    contact.Address = newAddress;
+                    Console.WriteLine("Enter new City:");
+                    string newCity = Console.ReadLine();
+                    contact.City = newCity;
+                    Console.WriteLine("Enter new State:");
+                    string newState = Console.ReadLine();
+                    contact.State = newState;
+                    Console.WriteLine("Enter new Zip Code:");
+                    string newZipcode = Console.ReadLine();
+                    contact.ZipCode = newZipcode;
+                    Console.WriteLine("Enter new Phone Number:");
+                    string newPhonenumber = Console.ReadLine();
+                    contact.PhoneNumber = newPhonenumber;
+                    Console.WriteLine("Enter new Email:");
+                    string newEmail = Console.ReadLine();
+                    contact.Email = newEmail;
+
+                }
+            }
+        }
     }
 }
-//        public void EditContact()
-//        {
-//            Console.WriteLine("Available Addressbooks are:: ");
-//            foreach (var key in DictName)
-//            {
-//                Console.WriteLine(key.Key + "      ");
-//            }
-//            Console.WriteLine("\nPlease Enter Name of the AddressBook you want to edit:: ");
-//            string dictName = Console.ReadLine();
-
-//            foreach (var element in DictName)
-//            {
-//                if (element.Key == dictName)
-//                {
-//                    Console.WriteLine("Enter new First Name");
-//                    string newFirstName = Console.ReadLine();
-//                    element.Value.FirstName = newFirstName;
-//                    Console.WriteLine("Enter new Last Name:");
-//                    string newLastName = Console.ReadLine();
-//                    element.Value.LastName = newLastName;
-//                    Console.WriteLine("Enter new Address:");
-//                    string newAddress = Console.ReadLine();
-//                    element.Value.Address = newAddress;
-//                    Console.WriteLine("Enter new City:");
-//                    string newCity = Console.ReadLine();
-//                    element.Value.City = newCity;
-//                    Console.WriteLine("Enter new State:");
-//                    string newState = Console.ReadLine();
-//                    element.Value.State = newState;
-//                    Console.WriteLine("Enter new Zip Code:");
-//                    string newZipcode = Console.ReadLine();
-//                    element.Value.ZipCode = newZipcode;
-//                    Console.WriteLine("Enter new Phone Number:");
-//                    string newPhonenumber = Console.ReadLine();
-//                    element.Value.PhoneNumber = newPhonenumber;
-//                    Console.WriteLine("Enter new Email:");
-//                    string newEmail = Console.ReadLine();
-//                    element.Value.Email = newEmail;
-
-//                }
-//            }
-
 //        }
 //        public void DeleteContact()
 //        {
