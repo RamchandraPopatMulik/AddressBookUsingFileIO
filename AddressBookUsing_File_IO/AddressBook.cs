@@ -48,7 +48,7 @@ namespace AddressBookUsing_File_IO
 
         public void EditContact(string Name)
         {
-          
+
             foreach (var contact in list)
             {
                 if (contact.FirstName == Name)
@@ -80,23 +80,26 @@ namespace AddressBookUsing_File_IO
 
                 }
             }
+
+
+
+        }
+        public void DeleteContact()
+        {
+            Console.WriteLine("PLease Enter First Name of the Contact you want to Delete:");
+            string name = Console.ReadLine();
+            foreach (var contact in list)
+            {
+                if (contact.FirstName == name)
+                {
+                    list.Remove(contact);
+                    break;
+                }
+            }
         }
     }
+
 }
-//        }
-//        public void DeleteContact()
-//        {
-//            Console.WriteLine("PLease Enter First Name of the Contact you want to Delete:");
-//            string name = Console.ReadLine();
-//            foreach (var contact in list)
-//            {
-//                if (contact.FirstName == name)
-//                {
-//                    list.Remove(contact);
-//                    break;
-//                }
-//            }
-//        }
 //        public void DuplicateChecker()
 //        {
 //            Console.WriteLine("Enter a unique name to your Addressbook:");
