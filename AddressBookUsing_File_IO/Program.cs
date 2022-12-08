@@ -12,32 +12,34 @@
             switch (userInput)
             {
                 case "1":
-                    addressBook.StoreContact();
+                    Console.WriteLine("First Name:");
+                    string firstname = Console.ReadLine();
+                    Console.WriteLine("Last Name:");
+                    string lastname = Console.ReadLine();
+                    Console.WriteLine("Address:");
+                    string address = Console.ReadLine();
+                    Console.WriteLine("City:");
+                    string city = Console.ReadLine();
+                    Console.WriteLine("State:");
+                    string state = Console.ReadLine();
+                    Console.WriteLine("Zip Code:");
+                    string zipcode = Console.ReadLine();
+                    Console.WriteLine("Phone Number:");
+                    string phonenumber = Console.ReadLine();
+                    Console.WriteLine("Email:");
+                    string email = Console.ReadLine();
+                    var newContact = new Contact(firstname, lastname, address, city, state, zipcode, phonenumber, email);
+                    addressBook.AddContact(newContact);
                     break;
                 case "2":
                     addressBook.DisplayAllContact();
                     break;
                 case "3":
-                    addressBook.EditContact();
-                    break;
-                case "4":
-                    addressBook.DeleteContact();
-                    break;
-                case "5":
-                    addressBook.DuplicateChecker();
-                    break;
-                case "6":
-                    addressBook.FindCityState();
-                    break;
-                case "7":
-                    addressBook.FindNumOfPerson();
-                    break;
-                case "8":
-                    addressBook.ChooseSort();
-                    break;
+                    return;
                 default:
-                    Console.WriteLine("Please Enter Valid Choice :");
+                    Console.WriteLine("Choose valid operation.");
                     break;
+
             }
         }
         
