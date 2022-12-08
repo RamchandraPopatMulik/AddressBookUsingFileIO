@@ -9,4 +9,8 @@
 
   <ProjectExtensions><VisualStudio><UserProperties addressbook_1json__JsonSchema="https://appsemble.app/api.json" /></VisualStudio></ProjectExtensions>
 
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="30.0.1" />
+  </ItemGroup>
+
 </Project>
