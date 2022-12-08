@@ -133,30 +133,30 @@ namespace AddressBookUsing_File_IO
                 }
             }
         }
-    }
+
+
+            public void SearchPerson()
+            {
+                Console.WriteLine("Please Enter City or State Which You Want to Search : ");
+                string city = Console.ReadLine();
+                foreach (var element in DictName)
+                {
+                    if (element.Value.City.Equals(city))
+                    {
+                        Console.WriteLine("Contact Found :" + city + " " + element.Value.FirstName);
+                    }
+                    else if (element.Value.State.Equals(city))
+                    {
+                        Console.WriteLine("Contact Found :" + city + " " + element.Value.FirstName);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Sorry No such City or State in AddressBook !!!!!!!");
+                    }
+                }
+            }
+        }
 }
-
-
-//        public void SearchPerson()
-//        {
-//            Console.WriteLine("Please Enter City or State Which You Want to Search : ");
-//            string city = Console.ReadLine();
-//            foreach (var element in DictName)
-//            {
-//                if (element.Value.City.Equals(city))
-//                {
-//                    Console.WriteLine("Contact Found :" + city + " " + element.Value.FirstName);
-//                }
-//                else if (element.Value.State.Equals(city))
-//                {
-//                    Console.WriteLine("Contact Found :" + city + " " + element.Value.FirstName);
-//                }
-//                else
-//                {
-//                    Console.WriteLine("Sorry No such City or State in AddressBook !!!!!!!");
-//                }
-//            }
-//        }
 //        public void FindCityState()
 //        {
 //            Console.WriteLine("Enter First Name of a Person to View his City and State : ");
