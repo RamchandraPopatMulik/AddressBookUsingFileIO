@@ -24,6 +24,21 @@
                     addressBook.DeleteContact();
                     break;
                 case "5":
+                    addressBook.DuplicateChecker();
+                    break;
+                case "6":
+                    addressBook.SearchPerson();
+                    break;
+                case "7":
+                    addressBook.FindCityState();
+                    break;
+                case "8":
+                    addressBook.FindNumOfPerson();
+                    break;
+                case "9":
+                    addressBook.SortByPersonName();
+                    break;
+                case "10":
                     return;
                 default:
                     Console.WriteLine("!!! Choose valid operation !!!");

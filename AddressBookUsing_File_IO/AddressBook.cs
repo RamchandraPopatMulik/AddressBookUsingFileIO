@@ -44,8 +44,6 @@ namespace AddressBookUsing_File_IO
                 Console.WriteLine("\nSaved Contact is  :\n " + contact.FirstName + contact.LastName + " " + contact.Address + "\nCity: " + contact.City + "\nState is : " + contact.State + "\nZip Code: " + contact.ZipCode + "\nPhone Number: " + contact.PhoneNumber + "\nEmail: " + contact.Email);
             }
         }
-
-
         public void EditContact(string Name)
         {
 
@@ -80,9 +78,6 @@ namespace AddressBookUsing_File_IO
 
                 }
             }
-
-
-
         }
         public void DeleteContact()
         {
@@ -154,7 +149,50 @@ namespace AddressBookUsing_File_IO
             }
 
         }
+        public void FindCityState()
+        {
+            Console.WriteLine("Enter First Name of a Person to View his City and State::");
+            string person = Console.ReadLine();
+            foreach (var element in DictName)
+            {
+                if (element.Value.FirstName.Equals(person))
+                {
+                    Console.WriteLine("\n" + person + " lives in :: '" + element.Value.City + "' City and '" + element.Value.State + "' State.\n");
+                }
+                else
+                {
+                    Console.WriteLine("No such Person found in Addressbook.\n\nAvailable person in your addressbook are :: " + element.Value.FirstName + "\n");
+                }
+            }
+        }
+        public void FindNumOfPerson()
+        {
+            Console.WriteLine("Enter City or State ::");
+            string cityState = Console.ReadLine();
+            int countPerson = 0;
+            foreach (var element in DictName)
+            {
+                if (element.Value.City.Equals(cityState))
+                {
+                    countPerson++;
+                }
+                if (element.Value.State.Equals(cityState))
+                {
+                    countPerson++;
+                }
+            }
+            Console.WriteLine("\nNumber of Person found in " + cityState + " are " + countPerson);
+        }
+        public void SortByPersonName()
+        {
+            Dictionary<string, Contact> sortList = DictName.OrderBy(x => x.Value.FirstName).ToDictionary(x => x.Key, x => x.Value);
+            foreach (var element in sortList)
+            {
+                Console.WriteLine(element.Value.FirstName + " " + element.Value.LastName + " " + element.Value.PhoneNumber);
+            }
+        }
     }
+}
 //        public void ChooseSort()
 //        {
 //            Console.WriteLine("Sort By: ");
