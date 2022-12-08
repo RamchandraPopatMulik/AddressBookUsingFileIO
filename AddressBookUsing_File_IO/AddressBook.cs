@@ -13,30 +13,30 @@ namespace AddressBookUsing_File_IO
         {
             list.Add(addcontact);
         }
-        //public Dictionary<string, Contact> DictName = new Dictionary<string, Contact>();
-        //public void StoreContact()
-        //{
-        //    Console.WriteLine("Please Enter Unique Name to Your Addressbook : ");
-        //    string addressbookName = Console.ReadLine();
-        //    Console.WriteLine("First Name:");
-        //    string firstname = Console.ReadLine();
-        //    Console.WriteLine("Last Name:");
-        //    string lastname = Console.ReadLine();
-        //    Console.WriteLine("Address:");
-        //    string address = Console.ReadLine();
-        //    Console.WriteLine("City:");
-        //    string city = Console.ReadLine();
-        //    Console.WriteLine("State:");
-        //    string state = Console.ReadLine();
-        //    Console.WriteLine("Zip Code:");
-        //    string zipcode = Console.ReadLine();
-        //    Console.WriteLine("Phone Number:");
-        //    string phonenumber = Console.ReadLine();
-        //    Console.WriteLine("Email:");
-        //    string email = Console.ReadLine();
-        //    var newContact = new Contact(firstname, lastname, address, city, state, zipcode, phonenumber, email);
-        //    DictName.Add(addressbookName, newContact);
-        //}
+        public Dictionary<string, Contact> DictName = new Dictionary<string, Contact>();
+        public void StoreContact()
+        {
+            Console.WriteLine("Please Enter Unique Name to Your Addressbook : ");
+            string addressbookName = Console.ReadLine();
+            Console.WriteLine("First Name:");
+            string firstname = Console.ReadLine();
+            Console.WriteLine("Last Name:");
+            string lastname = Console.ReadLine();
+            Console.WriteLine("Address:");
+            string address = Console.ReadLine();
+            Console.WriteLine("City:");
+            string city = Console.ReadLine();
+            Console.WriteLine("State:");
+            string state = Console.ReadLine();
+            Console.WriteLine("Zip Code:");
+            string zipcode = Console.ReadLine();
+            Console.WriteLine("Phone Number:");
+            string phonenumber = Console.ReadLine();
+            Console.WriteLine("Email:");
+            string email = Console.ReadLine();
+            var newContact = new Contact(firstname, lastname, address, city, state, zipcode, phonenumber, email);
+            DictName.Add(addressbookName, newContact);
+        }
         public void DisplayAllContact()
         {
             foreach (var contact in list)
